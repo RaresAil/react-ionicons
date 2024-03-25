@@ -1,0 +1,30 @@
+{
+  "name": "@raresail/react-ionicons",
+  "version": "1.0.0",
+  "repository": "git@github.com:RaresAil/react-ionicons.git",
+  "author": "RaresAil <rares.ailincai@raresdesigns.com>",
+  "license": "MIT",
+  "private": false,
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/react": "^18.2.69",
+    "postcss": "^8.4.38",
+    "react": "^18.2.0",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.13.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.3"
+  },
+  "scripts": {
+    "build": "rimraf ./dist && rollup -c --bundleConfigAsCjs"
+  }
+}
