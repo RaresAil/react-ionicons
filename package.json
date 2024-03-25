@@ -37,6 +37,7 @@
     "typescript": "^5.4.3"
   },
   "scripts": {
-    "build": "rimraf ./dist && rimraf ./src/icons && svgr ./src/svg && rollup -c --bundleConfigAsCjs"
+    "build:icons": "rimraf ./src/icons && svgr ./src/svg && node post-build-icons.js",
+    "build": "rimraf ./dist && yarn run build:icons && rollup -c --bundleConfigAsCjs"
   }
 }

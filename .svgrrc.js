@@ -5,5 +5,10 @@ module.exports = {
   typescript: true,
   outDir: path.join('src', 'icons'),
   memo: true,
-  icon: true
+  icon: true,
+  svgProps: {
+    className: '{className}',
+    fill: "{'#000'}",
+    style: '{style}'
+  }
 };

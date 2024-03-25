@@ -1,11 +1,12 @@
 const propTypesTemplate = (
-  { imports, interfaces, componentName, props, jsx, exports },
+  { /* imports, */ interfaces, componentName, jsx, exports },
   { tpl }
 ) => {
-  return tpl`${imports}
+  return tpl`import { memo } from 'react';
+import type { IonIconProps } from '../types';
 ${interfaces}
 
-function ${componentName}(${props}) {
+function ${componentName}({ className, strokeWidth, color, style, svgProps: props }: IonIconProps) {
   return ${jsx};
 }
 
