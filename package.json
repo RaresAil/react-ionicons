@@ -16,7 +16,16 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
-    "@types/react": "^18.2.69",
+    "@svgr/cli": "^8.1.0",
+    "@types/react": "^18.2.70",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "eslint": "^8.55.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.3.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-security": "^2.1.1",
     "postcss": "^8.4.38",
     "react": "^18.2.0",
     "rimraf": "^5.0.5",
@@ -28,6 +37,6 @@
     "typescript": "^5.4.3"
   },
   "scripts": {
-    "build": "rimraf ./dist && rollup -c --bundleConfigAsCjs"
+    "build": "rimraf ./dist && rimraf ./src/icons && svgr ./src/svg && rollup -c --bundleConfigAsCjs"
   }
 }
