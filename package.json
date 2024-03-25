@@ -38,6 +38,7 @@
   },
   "scripts": {
     "build:icons": "rimraf ./src/icons && svgr ./src/svg && node post-build-icons.js",
-    "build": "rimraf ./dist && yarn run build:icons && rollup -c --bundleConfigAsCjs"
+    "build": "rimraf ./dist && yarn run build:icons && rollup -c --bundleConfigAsCjs",
+    "lint": "eslint src/**/*.ts"
   }
 }
