@@ -4,11 +4,10 @@ module.exports = {
   template: require('./templates/svg.js'),
   typescript: true,
   outDir: path.join('src', 'icons'),
+  expandProps: 'end',
   memo: true,
   icon: true,
   svgProps: {
-    className: '{className}',
-    fill: 'currentColor',
-    style: '{style}'
+    fill: 'currentColor'
   }
 };
