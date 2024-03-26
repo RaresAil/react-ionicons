@@ -5,5 +5,4 @@ export interface IonIconProps {
   style?: CSSProperties;
   strokeWidth?: number;
   className?: string;
-  color?: string;
 }

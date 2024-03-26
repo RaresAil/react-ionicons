@@ -17,8 +17,8 @@ const path = require('path');
       await fs.writeFile(
         iconPath,
         content
-          .replace(/'#000'/gm, "color || '#000'")
-          .replace(/"#000"/gm, "{color || '#000'}")
+          .replace(/'#000'/gm, "'currentColor'")
+          .replace(/"#000"/gm, '"currentColor"')
           .replace(
             /strokeWidth={([0-9]+)}/gm,
             'strokeWidth={strokeWidth === undefined ? $1 : strokeWidth}'

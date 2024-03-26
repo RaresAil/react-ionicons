@@ -6,7 +6,7 @@ const propTypesTemplate = (
 import type { IonIconProps } from '../types';
 ${interfaces}
 
-function ${componentName}({ className, strokeWidth, color, style, svgProps: props }: IonIconProps) {
+function ${componentName}({ className, strokeWidth, style, svgProps: props }: IonIconProps) {
   return ${jsx};
 }
 

@@ -22,17 +22,16 @@ Import the icons
 import { AddCircleOutline } from '@raresail/react-ionicons';
 ```
 
-Use the icon, to change the size of the icon use the `font-size` property
+Use the icon, to change the size of the icon use the `font-size` CSS property and for the color (fill or stroke) use the `color` CSS property
 
 ```tsx
 function Component() {
   return (
     <AddCircleOutline
-      // To change the icon color
-      color="red"
-      // To change any style related to the svg or font size
+      // To change any style related to the svg, font size or color
       style={{
-        fontSize: '20px'
+        fontSize: '20px',
+        color: 'red'
       }}
       // If you need to add extra props use
       svgProps={{}}
@@ -53,4 +52,3 @@ function Component() {
 | style       | CSSProperties | {}       |
 | strokeWidth | number        | 32 or 16 |
 | className   | string        |          |
-| color       | string        | #000     |

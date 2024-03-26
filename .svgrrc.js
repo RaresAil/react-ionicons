@@ -8,7 +8,7 @@ module.exports = {
   icon: true,
   svgProps: {
     className: '{className}',
-    fill: "{'#000'}",
+    fill: 'currentColor',
     style: '{style}'
   }
 };
