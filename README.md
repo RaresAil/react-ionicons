@@ -33,22 +33,21 @@ function Component() {
         fontSize: '20px',
         color: 'red'
       }}
-      // If you need to add extra props use
-      svgProps={{}}
       // For icons that use strokeWidth you can change it like this
       strokeWidth={32}
       // to add a class name to the svg
       className="your class"
+      // All the props are forwarded to the SVG component
     />
   );
 }
 ```
 
-### Properties
+### Props
 
-| Name        | Type          | Default  |
-| ----------- | ------------- | -------- |
-| svgProps    | SVGProps      | {}       |
-| style       | CSSProperties | {}       |
-| strokeWidth | number        | 32 or 16 |
-| className   | string        |          |
+| Name        | Type             | Default  |
+| ----------- | ---------------- | -------- |
+| style       | CSSProperties    | {}       |
+| strokeWidth | number \| string | 32 or 16 |
+| className   | string           |          |
+| ...         | Other SVG Props  |          |

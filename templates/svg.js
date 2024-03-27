@@ -2,11 +2,13 @@ const propTypesTemplate = (
   { /* imports, */ interfaces, componentName, jsx, exports },
   { tpl }
 ) => {
-  return tpl`import { memo } from 'react';
-import type { IonIconProps } from '../types';
+  return tpl`import { SVGProps, memo } from 'react';
 ${interfaces}
 
-function ${componentName}({ className, strokeWidth, style, svgProps: props }: IonIconProps) {
+function ${componentName}({
+  strokeWidth,
+  ...props
+}: Omit<SVGProps<SVGSVGElement>, 'fill' | 'stroke'>) {
   return ${jsx};
 }
 
