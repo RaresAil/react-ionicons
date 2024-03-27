@@ -1,0 +1,19 @@
+@keyframes raresail-react-ionicon-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.raresail-react-ionicon {
+  box-sizing: content-box;
+}
+
+.raresail-react-ionicon[data-animation='spin'] {
+  animation-name: raresail-react-ionicon-spin;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2500ms;
+}

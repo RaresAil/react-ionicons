@@ -8,6 +8,8 @@ module.exports = {
   memo: true,
   icon: true,
   svgProps: {
-    fill: 'currentColor'
+    fill: 'currentColor',
+    className: '{`raresail-react-ionicon ${className}`}',
+    'data-animation': '{animation}'
   }
 };
