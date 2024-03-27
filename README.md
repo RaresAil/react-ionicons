@@ -51,3 +51,25 @@ function Component() {
 | strokeWidth | number \| string | 32 or 16 |
 | className   | string           |          |
 | ...         | Other SVG Props  |          |
+
+### Animations
+
+#### Spin
+
+To spin a icon add the `spin` prop, if you want to adjust the speed, use the `animation-duration` css property
+
+```tsx
+function() {
+  return <SyncOutline spin />;
+}
+```
+
+#### Beat
+
+To spin a icon add the `beat` prop, if you want to adjust the speed, use the `animation-duration` css property
+
+```tsx
+function() {
+  return <SyncOutline beat />;
+}
+```

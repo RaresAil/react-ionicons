@@ -11,11 +11,16 @@ function ${componentName}({
   strokeWidth,
   className,
   spin,
+  beat,
   ...props
 }: IonIconProps) {
   const animation = useMemo(() => {
     if (spin) {
       return 'spin';
+    }
+
+    if (beat) {
+      return 'beat';
     }
 
     return '';
