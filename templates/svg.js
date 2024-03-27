@@ -2,13 +2,30 @@ const propTypesTemplate = (
   { /* imports, */ interfaces, componentName, jsx, exports },
   { tpl }
 ) => {
-  return tpl`import { SVGProps, memo } from 'react';
+  return tpl`import '../style.css';
+import { memo, useMemo } from 'react';
+import { IonIconProps } from '../types';
 ${interfaces}
 
 function ${componentName}({
   strokeWidth,
+  className,
+  spin,
+  beat,
   ...props
-}: Omit<SVGProps<SVGSVGElement>, 'fill' | 'stroke'>) {
+}: IonIconProps) {
+  const animation = useMemo(() => {
+    if (spin) {
+      return 'spin';
+    }
+
+    if (beat) {
+      return 'beat';
+    }
+
+    return '';
+  }, [spin]);
+
   return ${jsx};
 }
 

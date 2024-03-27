@@ -1,0 +1,38 @@
+@keyframes raresail-react-ionicon-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes raresail-react-ionicon-beat {
+  0%,
+  50%,
+  100% {
+    transform: scale(1);
+  }
+  30%,
+  80% {
+    transform: scale(1.1);
+  }
+}
+
+.raresail-react-ionicon {
+  box-sizing: content-box;
+}
+
+.raresail-react-ionicon[data-animation='spin'] {
+  animation-name: raresail-react-ionicon-spin;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2500ms;
+}
+
+.raresail-react-ionicon[data-animation='beat'] {
+  animation-name: raresail-react-ionicon-beat;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-duration: 1.5s;
+}
