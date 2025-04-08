@@ -3,7 +3,7 @@ const propTypesTemplate = (
   { tpl }
 ) => {
   return tpl`import '../style.css';
-import { memo, useMemo } from 'react';
+import { memo } from 'react';
 import { IonIconProps } from '../types';
 ${interfaces}
 
@@ -14,18 +14,7 @@ function ${componentName}({
   beat,
   ...props
 }: IonIconProps) {
-  const animation = useMemo(() => {
-    if (spin) {
-      return 'spin';
-    }
-
-    if (beat) {
-      return 'beat';
-    }
-
-    return '';
-  }, [spin]);
-
+  const animation = (spin && 'spin') || (beat && 'beat');
   return ${jsx};
 }
 
