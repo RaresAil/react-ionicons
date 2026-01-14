@@ -26,6 +26,7 @@
     "eslint-plugin-n": "^16.3.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-security": "^2.1.1",
+    "glob": "^13.0.0",
     "postcss": "^8.4.38",
     "react": "^18.2.0",
     "rimraf": "^5.0.5",
@@ -38,7 +39,7 @@
   },
   "scripts": {
     "build:icons": "rimraf ./src/icons && svgr ./src/svg && node post-build-icons.js",
-    "build": "rimraf ./dist && yarn run build:icons && rollup -c --bundleConfigAsCjs",
+    "build": "rimraf ./dist && npm run build:icons && rollup -c --bundleConfigAsCjs",
     "lint": "eslint src/**/*.ts"
   }
 }

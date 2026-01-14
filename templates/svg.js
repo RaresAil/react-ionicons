@@ -8,7 +8,6 @@ import { IonIconProps } from '../types';
 ${interfaces}
 
 function ${componentName}({
-  strokeWidth,
   className,
   spin,
   beat,
