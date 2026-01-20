@@ -41,5 +41,9 @@
     "build:icons": "rimraf ./src/icons && svgr ./src/svg && node post-build-icons.js",
     "build": "rimraf ./dist && npm run build:icons && rollup -c --bundleConfigAsCjs",
     "lint": "eslint src/**/*.ts"
-  }
+  },
+  "sideEffects": [
+    "./dist/esm/style-*.js",
+    "./dist/cjs/index.js"
+  ]
 }
