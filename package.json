@@ -1,6 +1,6 @@
 {
   "name": "@raresail/react-ionicons",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "repository": "git@github.com:RaresAil/react-ionicons.git",
   "author": "RaresAil <rares.ailincai@raresdesigns.com>",
   "license": "Apache-2.0",
@@ -26,6 +26,7 @@
     "eslint-plugin-n": "^16.3.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-security": "^2.1.1",
+    "glob": "^10.5.0",
     "postcss": "^8.4.38",
     "react": "^18.2.0",
     "rimraf": "^5.0.5",
@@ -40,5 +41,9 @@
     "build:icons": "rimraf ./src/icons && svgr ./src/svg && node post-build-icons.js",
     "build": "rimraf ./dist && yarn run build:icons && rollup -c --bundleConfigAsCjs",
     "lint": "eslint src/**/*.ts"
-  }
+  },
+  "sideEffects": [
+    "./dist/esm/style-*.js",
+    "./dist/cjs/index.js"
+  ]
 }

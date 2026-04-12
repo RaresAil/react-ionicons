@@ -10,9 +10,13 @@ const path = require('path');
   await Promise.all(
     icons.map(async (file) => {
       const iconPath = path.join(iconsPath, file);
-      const content = await fs.readFile(iconPath, {
+      let content = await fs.readFile(iconPath, {
         encoding: 'utf8'
       });
+
+      if (content.includes('strokeWidth:') || content.includes('strokeWidth=')) {
+        content = content.replace('...props', 'strokeWidth, ...props');
+      }
 
       await fs.writeFile(
         iconPath,
